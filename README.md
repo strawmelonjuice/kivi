@@ -1,5 +1,5 @@
 # kivi
-A typescript port of strawmelonjuice/bananen, to see if the simplicity of JSTS could prosper expansion.
+A typescript port of [strawmelonjuice/bananen](https://github.com/strawmelonjuice/bananen), to see if the simplicity of JSTS could prosper expansion.
 
 ## Build-it-yourself!
 
