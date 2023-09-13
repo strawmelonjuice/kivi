@@ -7,7 +7,8 @@
     "postversion": "bun run ./src/exportversion.ts",
     "postinstall": "bun run ./src/exportversion.ts",
     "compile": "concurrently \"bunx tsc\" \"bun build ./src/* --compile --outfile=build/Release/kivi\"",
-    "start": "node dist/kivi.js",
+    "prestart": "bunx tsc",
+    "start": "bun run dist/kivi.js",
     "dev": "concurrently \"bunx tsc --watch\" \"nodemon -q dist/kivi.js\""
   },
   "keywords": [],
