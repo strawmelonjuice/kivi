@@ -5,6 +5,7 @@
   "bin": "build/Release/kivi",
   "scripts": {
     "postversion": "bun run ./src/exportversion.ts",
+    "postinstall": "bun run ./src/exportversion.ts",
     "compile": "concurrently \"bunx tsc\" \"bun build ./src/* --compile --outfile=build/Release/kivi\"",
     "start": "node dist/kivi.js",
     "dev": "concurrently \"bunx tsc --watch\" \"nodemon -q dist/kivi.js\""
@@ -24,6 +25,7 @@
     "@types/node": "^20.6.0",
     "concurrently": "^8.2.1",
     "nodemon": "^3.0.1",
+    "bun": "^1",
     "typescript": "^5.2.2"
   }
 }
