@@ -1,32 +1,12 @@
 {
   "name": "kivi",
-  "version": "0.0.1-alpha",
-  "description": "A typescript port of strawmelonjuice/bananen, to see if the simplicity of JSTS could prosper expansion.",
-  "bin": "build/Release/kivi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "postversion": "bun run ./src/exportversion.ts",
-    "postinstall": "bun run ./src/exportversion.ts",
-    "compile": "concurrently \"bunx tsc\" \"bun build ./src/* --compile --outfile=build/Release/kivi\"",
-    "prestart": "bunx tsc",
-    "start": "bun run dist/kivi.js",
-    "dev": "concurrently \"bunx tsc --watch\" \"nodemon -q dist/kivi.js\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Strawmelonjuice Mar",
-  "license": "ISC",
-  "dependencies": {
-    "@types/chalk": "^2.2.0",
-    "@types/commander": "^2.12.2",
-    "chalk": "^4",
-    "commander": "^11.0.0",
-    "toml-parse": "^1.0.1"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.1.2",
-    "@types/node": "^20.6.0",
-    "concurrently": "^8.2.1",
-    "nodemon": "^3.0.1",
-    "bun": "^1",
-    "typescript": "^5.2.2"
-  }
+  "author": "",
+  "license": "ISC"
 }
