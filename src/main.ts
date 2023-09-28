@@ -1,6 +1,7 @@
 import os from "os";
 import chalk from "chalk";
 import path from "path";
+const KIVI_VERSION = "0.0.1";
 const BANANEN_VERSION = "0.1.6-alpha";
 export class KiviBananen {
     bananenexecutable: string;
@@ -56,7 +57,7 @@ export class KiviBananen {
                 // process.exit(1);
                 break;
         }
-        console.log(`Successfully initialised ${chalk.bold(chalk.greenBright("Kivi! 🥝"))} ${chalk.italic("v" + process.env.npm_package_version)} by ${chalk.redBright("Straw") + chalk.green("melon") + chalk.yellowBright("juice")} ${chalk.magenta("Mar")}.\n\nusing Bananen binairy "${this.bananenexecutable}", also by ${chalk.redBright("Straw") + chalk.green("melon") + chalk.yellowBright("juice")} ${chalk.magenta("Mar")}.`);
+        console.log(`Successfully initialised ${chalk.bold(chalk.greenBright("Kivi! 🥝"))} ${chalk.italic("v" + KIVI_VERSION)} by ${chalk.redBright("Straw") + chalk.green("melon") + chalk.yellowBright("juice")} ${chalk.magenta("Mar")}.\n\nusing Bananen binairy "${this.bananenexecutable}", also by ${chalk.redBright("Straw") + chalk.green("melon") + chalk.yellowBright("juice")} ${chalk.magenta("Mar")}.`);
     }
     add(type: number, breaking: boolean, change: string) {
         var cmd: string;
@@ -77,11 +78,3 @@ export class KiviBananen {
         this.execute(`${this.bananenexecutable} regen`, () => { });
     }
 }
-const hi = new KiviBananen(path.join(__dirname, "../yes"));
-hi.init();
-hi.add(1, false, "testing ..");
-hi.add(4, false, "testing.  ");
-hi.add(2, true, "testing. .");
-hi.add(2, false, "tested!");
-hi.regen();
-hi.dub("Completed test!");
