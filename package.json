@@ -1,6 +1,6 @@
 {
   "name": "kivi",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A Node wrapper around @strawmelonjuice/bananen written in Typescript.",
   "main": "dist/main.js",
   "scripts": {
@@ -15,12 +15,14 @@
     "url": "https://strawmelonjuice.com/?p=projects"
   },
   "license": "MIT",
-  "dependencies": {
-  },
   "devDependencies": {
+    "@types/node": "^20.7.1",
     "concurrently": "^8.2.1",
     "nodemon": "^3.0.1",
-    "typescript": "^5.2.2",
-    "@types/node": "20.7.1"
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "chalk": "^4"
   }
 }
