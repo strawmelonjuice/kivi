@@ -1,12 +1,26 @@
 {
   "name": "kivi",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Node wrapper around @strawmelonjuice/bananen written in Typescript.",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "start": "node dist/main.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\""
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": {
+    "name": "Mar / MLC Bloeiman / Strawmelonjuice",
+    "email": "mar@strawmelonjuice.com",
+    "url": "https://strawmelonjuice.com/?p=projects"
+  },
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2",
+    "@types/node": "20.7.1"
+  }
 }

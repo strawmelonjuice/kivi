@@ -1,0 +1,1 @@
+console.log("Hi! --- ".repeat(1000));
