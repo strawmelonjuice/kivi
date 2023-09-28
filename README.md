@@ -24,7 +24,7 @@ const path = require("path")
 const kivi = new (require("./dist/main.js").KiviBananen)(path.join(__dirname, "../yes"));
 ```
 
-then you can use <span style="background-color: #f6ccff; color: #57b370">Kivi 🥝</span> as you would use <span style="background-color: #24273a; color: #ffcc00">Bananen 🍌</span>.
+then you can use <span style="background-color: #f6ccff; color: #57b370">Kivi 🥝</span> from your scripts as you would use <span style="background-color: #24273a; color: #ffcc00">Bananen 🍌</span>.
 
 ```js
 kivi.init();
