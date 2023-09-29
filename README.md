@@ -14,7 +14,7 @@ A Node wrapper around [@strawmelonjuice/bananen](https://github.com/strawmelonju
 First, install it into the current project.
 
 ```bash
-npm install @bananen/kivi
+npm install kivi-bananen
 ```
 
 ###### JavaScript/Typescript
