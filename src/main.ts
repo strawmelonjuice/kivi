@@ -1,7 +1,7 @@
 import os from "os";
 import chalk from "chalk";
 import path from "path";
-const KIVI_VERSION = "0.0.1";
+const KIVI_VERSION = "0.0.2";
 const BANANEN_VERSION = "0.1.6-alpha";
 export class KiviBananen {
     bananenexecutable: string;
