@@ -1,15 +1,23 @@
 import os from "os";
 import chalk from "chalk";
 import path from "path";
-const KIVI_VERSION = "0.1.3-alpha";
+const KIVI_VERSION = "0.1.5-alpha";
 const BANANEN_VERSION = "0.1.6-alpha";
 export class KiviBananen {
     bananenexecutable: string;
     execute: (command: string, callback: CallableFunction) => void;
-    public cwd: string;
+    public info: { versions: { kivi: string; bananen: string; }; cwd: string; };
+    cwd: string;
     constructor(cwd: string) {
-        var exec = require("child_process").exec;
-        this.cwd = cwd;
+        const exec = require("child_process").exec;
+        this.info = {
+            versions: {
+                kivi: KIVI_VERSION,
+                bananen: BANANEN_VERSION
+            },
+            cwd: cwd
+        }
+        this.cwd = this.info.cwd;
         this.execute = (command: string, callback: CallableFunction) => {
             exec(
                 command,
