@@ -17,11 +17,19 @@ First, install it into the current project.
 npm install kivi-bananen
 ```
 
-###### JavaScript/Typescript
+###### JavaScript (less tested)
 
 ```js
 const path = require("path")
-const kivi = new (require("./dist/main.js").KiviBananen)(path.join(__dirname, "../yes"));
+const kivi = new (require(kivi-bananen)).KiviBananen)(path.join(__dirname, "../yes"));
+```
+
+###### TypeScript (recomended, kivi is written in TS.)
+```ts
+import path from 'path';
+import KiviBananen from 'kivi-bananen';
+const kivi = new KiviBananen(path.join(__dirname, "../yes"));
+
 ```
 
 then you can use <span style="background-color: #f6ccff; color: #57b370">Kivi 🥝</span> from your scripts as you would use <span style="background-color: #24273a; color: #ffcc00">Bananen 🍌</span>.
@@ -31,6 +39,7 @@ kivi.init();
 kivi.add(1, false, "testing ..");
 kivi.add(4, false, "testing.  ");
 kivi.add(2, true, "testing. .");
+kivi.chdir(path.join(__dirname, "./test/"))
 kivi.add(2, false, "tested!");
 kivi.regen();
 kivi.dub("Completed test!");
