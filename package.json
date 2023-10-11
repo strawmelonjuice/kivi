@@ -1,13 +1,15 @@
 {
   "name": "kivi-bananen",
-  "version": "0.1.5-alpha",
+  "version": "0.2.1-alpha",
   "description": "A Node wrapper around @strawmelonjuice/bananen written in Typescript.",
   "main": "dist/main.js",
   "scripts": {
     "prepack": "npx tsc",
     "build": "npx tsc",
     "start": "node dist/main.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\""
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\"",
+    "pretest": "npx tsc",
+    "test": "node dist/test.js"
   },
   "keywords": [],
   "author": {

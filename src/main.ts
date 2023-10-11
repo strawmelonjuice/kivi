@@ -1,7 +1,7 @@
 import os from "os";
 import chalk from "chalk";
 import path from "path";
-const KIVI_VERSION = "0.1.5-alpha";
+const KIVI_VERSION = "0.2.1-alpha";
 const BANANEN_VERSION = "0.1.6-alpha";
 export class KiviBananen {
     bananenexecutable: string;
@@ -25,6 +25,7 @@ export class KiviBananen {
                     cwd: cwd,
                 },
                 function (error: Error, stdout: string, stderr: string) {
+                    console.error(chalk.redBright(stderr));
                     callback(stdout);
                 },
             );
@@ -81,10 +82,11 @@ export class KiviBananen {
                 );
                 break;
             case "linux_64" || "linux_arm":
-                this.bananenexecutable = path.join(
+                                this.bananenexecutable = path.join(
                     __dirname,
                     "/../bundled/" + machine_double + "_" + BANANEN_VERSION,
                 );
+                this.execute(`chmod +x '${this.bananenexecutable}'`,() => {console.log(`Successfully made '${this.bananenexecutable}' executable.`)})
                 break;
             default:
                 throw new Error(chalk.red("ERROR: ") + "Unsupported machine!");
