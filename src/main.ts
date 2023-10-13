@@ -32,7 +32,10 @@ export class KiviBananen {
                     callback(stdout);
                 },
             );
-        };
+        }
+    }
+    do(callback: (KiviInstance: typeof this) => void): void {
+        const exec = require("child_process").exec;
 
         exec(
             "cargo --version",
@@ -149,10 +152,9 @@ export class KiviBananen {
                      chalk.yellowBright("juice")
                      } ${chalk.magenta("Mar")}.`,
                  );
+                 callback(this);
             },
         );
-        
-        
     }
     add(type: number, breaking: boolean, change: string) {
         var cmd: string;
@@ -175,7 +177,8 @@ export class KiviBananen {
     }
     dub(releasename: string) {
         this.execute(`${this.bananenexecutable} dub ${releasename}`, () => {});
-    }
+}
+
     regen() {
         this.execute(`${this.bananenexecutable} regen`, () => {});
     }
