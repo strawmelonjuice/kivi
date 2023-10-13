@@ -1,6 +1,6 @@
 {
   "name": "kivi-bananen",
-  "version": "0.2.1-alpha",
+  "version": "0.3.1-alpha",
   "bananenVersion": "0.1.7-beta",
   "description": "A Node wrapper around @strawmelonjuice/bananen written in Typescript.",
   "main": "dist/main.js",
@@ -9,7 +9,7 @@
     "build": "npx tsc",
     "start": "node dist/main.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\"",
-    "pretest": "npx tsc",
+    "pretest": "npm install && npx tsc",
     "test": "node dist/test.js"
   },
   "keywords": [],
@@ -18,7 +18,7 @@
     "email": "mar@strawmelonjuice.com",
     "url": "https://strawmelonjuice.com/?p=projects"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "devDependencies": {
     "@types/node": "^20.7.1",
     "@types/tar": "^6.1.6",
