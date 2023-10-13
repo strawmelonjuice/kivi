@@ -171,6 +171,9 @@ dist
 # IntelliJ based IDEs
 .idea
 
+# VS
+.vs
+
 # Testing folder
 yes/
 
