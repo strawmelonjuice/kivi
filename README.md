@@ -1,7 +1,7 @@
 # kivi
 A Node wrapper around [@strawmelonjuice/bananen](https://github.com/strawmelonjuice/bananen) written in Typescript.
 
-
+I will be rewriting this I just found it funny to experiment w it but I kinda messed the whole thing up lol
 
 ## Usage
 
