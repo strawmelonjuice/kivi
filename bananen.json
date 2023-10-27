@@ -1,0 +1,43 @@
+{
+  "main": {
+    "bananen_version": "0.1.7-beta2",
+    "bananendata_version": 3
+  },
+  "config": {
+    "changelogfile": "changelog.md",
+    "rollingrelease": true,
+    "customisation": {
+      "log_name": "Changelog",
+      "released_name": "Past changes",
+      "unreleased_name": "Unreleased changes",
+      "changetypes": {
+        "addition": {
+          "translation": "Addition",
+          "color": "#336600"
+        },
+        "removal": {
+          "translation": "Removal",
+          "color": "#ff0000"
+        },
+        "update": {
+          "translation": "Update",
+          "color": "#0033cc"
+        },
+        "fix": {
+          "translation": "Fix",
+          "color": "#9900cc"
+        }
+      }
+    }
+  },
+  "saved_changes": {
+    "unreleased": [
+      {
+        "contents": "Fix Windows error of no Bananen on path even when Bananen is on path",
+        "type": 3,
+        "breaking": false
+      }
+    ],
+    "released": []
+  }
+}

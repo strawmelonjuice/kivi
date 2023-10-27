@@ -15,9 +15,10 @@ export class KiviBananen {
     public info: { versions: { kivi: string; bananen: string; }; cwd: string; };
     constructor(cwd: string) {
         const shell = (cmd: string) => execSync(cmd, { encoding: 'utf8' });
-
+        let locator = "which";
+        if (os.platform() === "win32") { locator = "where" }
          const executableIsAvailable = (name: string) => {
-            try { shell(`which ${name}`); return true }
+            try { shell(`${locator} ${name}`); return true }
             catch (error) { return false }
         }
         if (executableIsAvailable("bananen")) {

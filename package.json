@@ -1,6 +1,6 @@
 {
   "name": "kivi-bananen",
-  "version": "2.0.1-alpha",
+  "version": "2.1.0-alpha",
   "description": "A Node wrapper around @strawmelonjuice/bananen written in Typescript.",
   "main": "dist/main.js",
   "scripts": {
